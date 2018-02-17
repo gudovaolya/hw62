@@ -1,13 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import {Switch, Route} from 'react-router-dom';
+
 import './App.css';
-import MainNav from "./components/MainNav/MainNav";
+import Header from "./components/Header/Header";
+import Home from "./containers/Home/Ноme";
+import About from "./containers/About/About";
+import Contacts from "./containers/Contacts/Contacts";
 
 class App extends Component {
+
+
+
+
   render() {
     return (
-      <div className="App">
-        <MainNav/>
-      </div>
+        <Fragment>
+            <Header />
+
+            <Switch>
+                <Route path="/" exact component={Home}/>
+                <Route path="/about" exact component={About}/>
+                <Route path="/contacts" exact component={Contacts}/>
+                <Route render={() => <h1>404 page not found</h1>}/>
+            </Switch>
+        </Fragment>
+
     );
   }
 }
