@@ -1,10 +1,15 @@
-import React, {Component} from 'react';
-
+import React, {Component, Fragment} from 'react';
+import Promo from '../../components/Promo/Promo';
+import Testimonials from "../../components/Testimonials/Testimonials";
 
 class Home extends Component {
     render () {
         return (
-            <h1>Home page</h1>
+           <Fragment>
+               <Promo />
+               <Testimonials />
+           </Fragment>
+
         )
     }
 }
