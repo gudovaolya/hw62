@@ -1,0 +1,56 @@
+.service{
+    width: 25%;
+    padding: 0 24px 0 0;
+    font-size: 13px;
+    float: left;
+}
+.service h4{
+    margin: 0 0 10px;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 11px 0 20px 0;
+    display: flex;
+    align-items: center;
+}
+.service h4 i{
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #0b80c8;
+    border-radius: 50%;
+}
+.service h4 i::before{
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #0b80c8;
+    font-size: 20px;
+}
+.service h4.pen i::before{
+    content: "\f303";
+}
+.service h4.screen i::before{
+    content: "\f108";
+}
+.service h4.wrench i::before{
+    content: "\f0ad";
+}
+.service h4.leaf i::before{
+    content: "\f06c";
+}
+@media screen and (max-width: 840px){
+    .service{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .service:nth-child(2n+1){
+        clear: left;
+    }
+}
